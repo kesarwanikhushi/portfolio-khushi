@@ -34,10 +34,26 @@ const messageSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    status: {
+      type: String,
+      enum: ['unread', 'read', 'archived'],
+      default: 'unread',
+    },
+    replied: {
+      type: Boolean,
+      default: false,
+    },
+    ipAddress: {
+      type: String,
+    },
   },
   {
     timestamps: true,
   }
 );
+
+// Indexes for better query performance
+messageSchema.index({ status: 1, createdAt: -1 });
+messageSchema.index({ email: 1 });
 
 module.exports = mongoose.model('Message', messageSchema);

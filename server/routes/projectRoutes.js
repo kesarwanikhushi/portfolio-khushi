@@ -7,16 +7,21 @@ const {
   createProject,
   updateProject,
   deleteProject,
+  getProjectCategories,
 } = require('../controllers/projectController');
+const { protect, authorize } = require('../middleware/auth');
+const validate = require('../middleware/validate');
+const { projectSchema } = require('../utils/validators');
 
 // Public routes
 router.get('/', getAllProjects);
 router.get('/featured', getFeaturedProjects);
-router.get('/:id', getProjectById);
+router.get('/stats/categories', getProjectCategories);
+router.get('/:identifier', getProjectById);
 
-// Admin routes (add authentication middleware later)
-router.post('/', createProject);
-router.put('/:id', updateProject);
-router.delete('/:id', deleteProject);
+// Admin routes (protected)
+router.post('/', protect, authorize('admin'), validate(projectSchema), createProject);
+router.put('/:id', protect, authorize('admin'), validate(projectSchema), updateProject);
+router.delete('/:id', protect, authorize('admin'), deleteProject);
 
 module.exports = router;
