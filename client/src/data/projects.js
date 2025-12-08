@@ -1,0 +1,58 @@
+// Sample projects data
+// Replace with actual API calls when backend is ready
+export const projectsData = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'A full-featured e-commerce platform with cart, payment integration, and admin panel.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+  {
+    id: 2,
+    title: 'Task Management App',
+    description: 'Collaborative task management tool with real-time updates and team features.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'Express', 'Socket.io', 'MongoDB'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+  {
+    id: 3,
+    title: 'Social Media Dashboard',
+    description: 'Analytics dashboard for tracking social media metrics and engagement.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'Node.js', 'Chart.js', 'PostgreSQL'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+  {
+    id: 4,
+    title: 'Blog Platform',
+    description: 'Modern blogging platform with markdown support and SEO optimization.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'Express', 'MongoDB', 'AWS S3'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+  {
+    id: 5,
+    title: 'Weather App',
+    description: 'Real-time weather application with geolocation and 7-day forecast.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'OpenWeather API', 'Tailwind CSS'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+  {
+    id: 6,
+    title: 'Portfolio CMS',
+    description: 'Content management system for managing portfolio projects and blog posts.',
+    image: 'https://via.placeholder.com/400x200',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    liveUrl: 'https://example.com',
+    githubUrl: 'https://github.com/username/project',
+  },
+];
