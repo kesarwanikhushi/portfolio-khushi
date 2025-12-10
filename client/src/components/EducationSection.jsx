@@ -11,16 +11,8 @@ const EducationSection = () => {
       field: 'with Specialization in DevOps',
       institution: 'Chandigarh University',
       period: '2023 - 2027',
-      description: 'CGPA: 7.41 | Focused on Full-Stack Development, DevOps practices, Cloud Computing, and UI/UX Design',
+      description: 'Focused on Full-Stack Development, DevOps practices, Cloud Computing, and UI/UX Design',
       status: 'current',
-    },
-    {
-      degree: 'Senior Secondary',
-      field: 'Science Stream',
-      institution: 'Stella Maris Convent School',
-      period: '2022',
-      description: 'Percentage: 76.6% | Strong foundation in Mathematics and Computer Science',
-      status: 'completed',
     },
   ];
 
