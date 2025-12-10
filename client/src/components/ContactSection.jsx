@@ -26,21 +26,13 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace with your API endpoint
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        toast.success('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        toast.error('Failed to send message. Please try again.');
-      }
+      // Using mailto link to open email client
+      const mailtoLink = `mailto:your.email@example.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+      
+      window.location.href = mailtoLink;
+      
+      toast.success('Opening your email client...');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       toast.error('An error occurred. Please try again later.');
     } finally {

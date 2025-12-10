@@ -40,9 +40,27 @@ const EducationSection = () => {
   ];
 
   const certifications = [
-    'Microsoft Certified Azure AI Fundamentals',
-    'DevOps Certificate from Tutedude',
-    'Postman API Fundamentals Student Expert',
+    {
+      name: 'Microsoft Certified Azure AI Fundamentals',
+      issuer: 'Microsoft',
+      date: '2025',
+      image: 'https://images.credly.com/size/680x680/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png',
+      credentialUrl: '#',
+    },
+    {
+      name: 'DevOps Certificate',
+      issuer: 'Tutedude',
+      date: '2025',
+      image: 'https://img.icons8.com/color/480/000000/docker.png',
+      credentialUrl: '#',
+    },
+    {
+      name: 'Postman API Fundamentals Student Expert',
+      issuer: 'Postman',
+      date: '2025',
+      image: 'https://api.badgr.io/public/badges/Mzc0MTY3NjMtMzUyMy00ZWE1LWI3OWItNzRjYjM4YzI1ZDEw/image',
+      credentialUrl: '#',
+    },
   ];
 
   return (
@@ -103,23 +121,59 @@ const EducationSection = () => {
 
         {/* Certifications */}
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl font-bold text-center mb-8 gradient-text">
               Certifications & Learning Paths
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.03 }}
-                  className="flex items-center gap-3 p-4 bg-dark-900/50 border border-dark-800 rounded-xl hover:border-primary-500/50 transition-all duration-300"
+                  whileHover={{ y: -8 }}
+                  className="card-hover h-full overflow-hidden group"
                 >
-                  <div className="w-2 h-2 rounded-full bg-primary-400" />
-                  <span className="text-dark-200">{cert}</span>
+                  {/* Certificate Image */}
+                  <div className="relative h-48 bg-gradient-to-br from-dark-800 to-dark-900 flex items-center justify-center p-6 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <img 
+                      src={cert.image} 
+                      alt={cert.name}
+                      className="w-32 h-32 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  
+                  {/* Certificate Info */}
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <h4 className="font-bold text-dark-100 leading-tight flex-1 group-hover:text-primary-400 transition-colors duration-300">
+                        {cert.name}
+                      </h4>
+                    </div>
+                    
+                    <div className="space-y-2 mb-4">
+                      <p className="text-sm text-dark-300">
+                        <span className="text-dark-500">Issued by:</span> {cert.issuer}
+                      </p>
+                      <p className="text-sm text-dark-400">
+                        <span className="text-dark-500">Date:</span> {cert.date}
+                      </p>
+                    </div>
+                    
+                    {/* View Credential Button */}
+                    <a
+                      href={cert.credentialUrl}
+                      className="inline-flex items-center gap-2 text-sm text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                    >
+                      <span>View Credential</span>
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </div>
