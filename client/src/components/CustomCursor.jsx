@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const CustomCursor = () => {
@@ -7,40 +7,57 @@ const CustomCursor = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   
-  const springConfig = { damping: 30, stiffness: 150, mass: 0.5 };
+  // Smooth spring config - balanced speed and natural feel
+  const springConfig = { damping: 20, stiffness: 200, mass: 0.2, restSpeed: 0.001 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
+  // Memoized callbacks for better performance
+  const handleMouseEnter = useCallback(() => setCursorVariant('hover'), []);
+  const handleMouseLeave = useCallback(() => setCursorVariant('default'), []);
+
   useEffect(() => {
+    let rafId;
+    let lastX = -100;
+    let lastY = -100;
+
     const mouseMove = (e) => {
-      cursorX.set(e.clientX);
-      cursorY.set(e.clientY);
+      // Throttle updates using requestAnimationFrame
+      if (rafId) return;
+      
+      rafId = requestAnimationFrame(() => {
+        if (Math.abs(e.clientX - lastX) > 0.5 || Math.abs(e.clientY - lastY) > 0.5) {
+          cursorX.set(e.clientX);
+          cursorY.set(e.clientY);
+          lastX = e.clientX;
+          lastY = e.clientY;
+        }
+        rafId = null;
+      });
     };
 
-    const handleMouseEnter = () => setCursorVariant('hover');
-    const handleMouseLeave = () => setCursorVariant('default');
-
-    window.addEventListener('mousemove', mouseMove);
+    window.addEventListener('mousemove', mouseMove, { passive: true });
 
     // Add hover effect to interactive elements
     const interactiveElements = document.querySelectorAll('a, button, input, textarea, .cursor-hover');
     interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', handleMouseEnter);
-      el.addEventListener('mouseleave', handleMouseLeave);
+      el.addEventListener('mouseenter', handleMouseEnter, { passive: true });
+      el.addEventListener('mouseleave', handleMouseLeave, { passive: true });
     });
 
     return () => {
+      if (rafId) cancelAnimationFrame(rafId);
       window.removeEventListener('mousemove', mouseMove);
       interactiveElements.forEach((el) => {
         el.removeEventListener('mouseenter', handleMouseEnter);
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, handleMouseEnter, handleMouseLeave]);
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block"
+      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block will-change-transform"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,
@@ -51,7 +68,7 @@ const CustomCursor = () => {
         animate={{
           scale: cursorVariant === 'hover' ? 1.3 : 1,
         }}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
       >
         {/* Arrow Shape with Gradient Border */}
         <svg 
@@ -89,15 +106,15 @@ const CustomCursor = () => {
 
         {/* Glow Effect on Hover Only */}
         <motion.div
-          className="absolute inset-0 blur-xl -z-10 rounded-lg"
+          className="absolute inset-0 blur-xl -z-10 rounded-lg will-change-transform"
           style={{
             background: 'linear-gradient(135deg, #8b5cf6, #3b82f6, #10b981)',
           }}
           animate={{
-            opacity: cursorVariant === 'hover' ? 0.9 : 0,
-            scale: cursorVariant === 'hover' ? 1.5 : 1,
+            opacity: cursorVariant === 'hover' ? 0.7 : 0,
+            scale: cursorVariant === 'hover' ? 1.3 : 1,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         />
       </motion.div>
     </motion.div>

@@ -41,7 +41,7 @@ const Hero = () => {
 
   const socialLinks = [
     { icon: FiGithub, href: 'https://github.com/kesarwanikhushi', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/khushi-kesarwani', label: 'LinkedIn' },
+    { icon: FiLinkedin, href: 'https://linkedin.com/in/khushi-kesarwani7080', label: 'LinkedIn' },
     { icon: FiMail, href: 'mailto:kesarwani.khushi121@gmail.com', label: 'Email' },
   ];
 

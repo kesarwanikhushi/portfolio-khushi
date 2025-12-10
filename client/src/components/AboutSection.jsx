@@ -40,32 +40,26 @@ const AboutSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <SectionHeading
-          subtitle="// About Me"
-          title="Crafting Digital Experiences"
+          subtitle="About Me"
           centered
         />
 
         <div className="max-w-4xl mx-auto mb-20">
           <ScrollReveal>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              Hi, I'm <span className="gradient-text font-semibold">Khushi Kesarwani</span> — a Computer Science & Engineering student specializing in 
-              DevOps at <span className="text-primary-400">Chandigarh University</span>. I'm passionate about building reliable, secure, and user-centric 
-              digital products by combining the power of full-stack development, DevOps practices, and AI-driven solutions.
+              Hi, I'm <span className="gradient-text font-semibold">Khushi Kesarwani</span> a passionate technology enthusiast, open-source learner, and someone who truly enjoys creating meaningful work through curiosity and collaboration. I love exploring new tools, experimenting with ideas, and turning concepts into practical solutions that make a difference.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              I've worked on real-world projects such as <span className="text-primary-400">Vora</span>, a secure OAuth 2.0 authentication system, 
-              <span className="text-secondary-400"> Krishi Mitra</span>, an AI agricultural assistant PWA, and a <span className="text-accent-400">DSA Tracker</span> productivity 
-              tool. My experience spans front-end engineering, backend development with Node/Flask, database design, and hands-on use of tools like Docker, 
-              Kubernetes, GitHub Actions, Jenkins, and Terraform.
+              My journey in tech has been shaped by continuous learning, hands-on experiences, and active participation in developer communities. Whether it's contributing to open-source, organizing or co-hosting tech sessions, or working on projects with real-world impact, I enjoy being part of spaces where knowledge is shared and people grow together. I strongly believe that technology becomes meaningful when it enables collaboration, empowerment, and innovation.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              I also hold certifications in <span className="text-secondary-400">Microsoft Azure AI Fundamentals</span>, <span className="text-accent-400">DevOps</span>, 
-              and <span className="text-primary-400">API Development with Postman</span>, and I've served as the Design Head of the Technophiles Society and a 
-              Campus Ambassador at GirlScript Summer of Code.
+              I'm driven by the excitement of discovering new possibilities from understanding how things work to building something from the ground up. I enjoy working with people who share the same curiosity and energy, and I'm always open to opportunities that challenge me to think creatively and push my skills further.
+            </p>
+            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
+              As I continue learning and contributing, my goal is to build a career where development, innovation, and community intersect. I aspire to contribute to projects that create real value, explore the ever-changing world of tech, and become a part of communities that encourage growth, inclusivity, and lifelong learning.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed text-center">
-              I love designing clean user experiences, solving meaningful problems, and building tech that actually helps people. I'm always exploring new 
-              technologies and working on projects that push my creativity and engineering skills forward.
+              If my work or passions resonate with you, I'd love to connect and collaborate!
             </p>
           </ScrollReveal>
         </div>

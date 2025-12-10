@@ -60,8 +60,7 @@ const EducationSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <SectionHeading
-          subtitle="// Education & Growth"
-          title="Academic Journey"
+          subtitle="Education & Growth"
           centered
         />
 

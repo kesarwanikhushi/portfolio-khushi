@@ -83,8 +83,7 @@ const ContactSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <SectionHeading
-          subtitle="// Get In Touch"
-          title="Let's Work Together"
+          subtitle="Get In Touch"
           centered
         />
 

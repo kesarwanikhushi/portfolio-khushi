@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 
 const SectionHeading = ({ 
-  title, 
   subtitle, 
   gradient = true,
   centered = false,
@@ -16,13 +15,10 @@ const SectionHeading = ({
         transition={{ duration: 0.6 }}
       >
         {subtitle && (
-          <p className="text-primary-400 font-mono text-sm md:text-base mb-4 tracking-wider uppercase">
+          <h2 className={`heading-lg ${gradient ? 'gradient-text' : 'text-dark-50'}`}>
             {subtitle}
-          </p>
+          </h2>
         )}
-        <h2 className={`heading-lg ${gradient ? 'gradient-text' : 'text-dark-50'}`}>
-          {title}
-        </h2>
       </motion.div>
     </div>
   );

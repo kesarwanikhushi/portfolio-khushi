@@ -15,8 +15,7 @@ const ProjectsSection = ({ projects = [] }) => {
     <section className="section bg-dark-900/30 relative" id="projects">
       <div className="container mx-auto px-6">
         <SectionHeading
-          subtitle="// My Work"
-          title="Projects"
+          subtitle="My Work"
           centered
         />
 
