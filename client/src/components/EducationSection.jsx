@@ -7,43 +7,50 @@ import GlowCard from './ui/GlowCard';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Bachelor of Technology',
-      field: 'Computer Science & Engineering',
-      institution: 'Your University Name',
-      period: '2021 - 2025',
-      description: 'Focused on Software Engineering, Data Structures, and Cloud Computing',
+      degree: 'B.E. Computer Science & Engineering',
+      field: 'with Specialization in DevOps',
+      institution: 'Chandigarh University',
+      period: '2023 - 2027',
+      description: 'CGPA: 7.41 | Focused on Full-Stack Development, DevOps practices, Cloud Computing, and UI/UX Design',
       status: 'current',
+    },
+    {
+      degree: 'Senior Secondary',
+      field: 'Science Stream',
+      institution: 'Stella Maris Convent School',
+      period: '2022',
+      description: 'Percentage: 76.6% | Strong foundation in Mathematics and Computer Science',
+      status: 'completed',
     },
   ];
 
   const achievements = [
     {
       icon: FiAward,
-      title: 'Academic Excellence',
-      description: 'Maintained strong academic performance with focus on practical projects',
-    },
-    {
-      icon: FiBookOpen,
-      title: 'Relevant Coursework',
-      description: 'Web Development, Cloud Computing, Database Management, Software Engineering',
-    },
-    {
-      icon: FiUsers,
-      title: 'Cloud & DevOps Society',
-      description: 'Active member contributing to workshops and tech events',
+      title: 'Design Mania Runner-Up',
+      description: 'Runner-up at Design Mania Tech-Era 2.0 (April 2025)',
     },
     {
       icon: FiTrendingUp,
-      title: 'Continuous Learning',
-      description: 'Constantly exploring new technologies and building projects',
+      title: 'Hackathon Achievement',
+      description: 'Selected in Top 25 Teams at Hack-o-Fiesta 6.0 (May 2025)',
+    },
+    {
+      icon: FiUsers,
+      title: 'Design Head',
+      description: 'Design Head at Technophiles Society, AIT CSE (Jan 2025 - June 2025)',
+    },
+    {
+      icon: FiBookOpen,
+      title: 'Campus Ambassador',
+      description: 'Campus Ambassador at GirlScript Summer of Code (June 2025 - December 2025)',
     },
   ];
 
   const certifications = [
-    'AWS Cloud Practitioner (Learning)',
-    'Full-Stack Web Development',
-    'UI/UX Design Fundamentals',
-    'Docker & Kubernetes Basics',
+    'Microsoft Certified Azure AI Fundamentals',
+    'DevOps Certificate from Tutedude',
+    'Postman API Fundamentals Student Expert',
   ];
 
   return (

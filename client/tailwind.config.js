@@ -66,14 +66,15 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Space Grotesk', 'Outfit', 'sans-serif'],
+        heading: ['Space Grotesk', 'Outfit', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       fontSize: {
-        'display-lg': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-md': ['3.75rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-sm': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'display-lg': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'display-md': ['3.75rem', { lineHeight: '1.1', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'display-sm': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.005em', fontWeight: '600' }],
       },
       spacing: {
         '18': '4.5rem',

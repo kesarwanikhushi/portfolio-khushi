@@ -5,6 +5,7 @@ import ProjectsSection from '../components/ProjectsSection';
 import EducationSection from '../components/EducationSection';
 import ContactSection from '../components/ContactSection';
 import MarqueeText from '../components/ui/MarqueeText';
+import { projectsData } from '../data/projects';
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
 
       {/* Projects Section */}
       <section id="projects">
-        <ProjectsSection />
+        <ProjectsSection projects={projectsData} />
       </section>
 
       {/* Education Section */}

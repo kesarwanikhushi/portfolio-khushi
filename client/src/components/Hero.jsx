@@ -1,10 +1,24 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiDownload, FiArrowRight } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AnimatedText from './ui/AnimatedText';
 import FloatingElement from './ui/FloatingElement';
 
 const Hero = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,9 +40,9 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FiGithub, href: 'https://github.com/kesarwanikhushi', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://linkedin.com/in/khushi-kesarwani', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:kesarwani.khushi121@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -77,15 +91,15 @@ const Hero = () => {
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-dark-300 mb-2">
               <AnimatedText
                 sequence={[
-                  'Student Developer',
-                  2000,
-                  'Cloud Enthusiast',
-                  2000,
-                  'DevOps Explorer',
+                  'Full-Stack Developer',
                   2000,
                   'UI/UX Designer',
                   2000,
-                  'MERN Stack Developer',
+                  'DevOps Enthusiast',
+                  2000,
+                  'Azure AI Certified',
+                  2000,
+                  'API Development Expert',
                   2000,
                 ]}
                 className="gradient-text"
@@ -98,8 +112,9 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-dark-400 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            Passionate about building modern web applications and exploring cloud technologies. 
-            Combining design aesthetics with robust development to create impactful digital experiences.
+            B.E. Computer Science student specializing in DevOps at Chandigarh University. 
+            Passionate about building secure, scalable applications with modern tech stacks. 
+            Design Head at Technophiles Society and Campus Ambassador at GirlScript Summer of Code.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -107,21 +122,13 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-wrap items-center justify-center gap-4 mb-16"
           >
-            <Link to="/projects" className="btn-primary group">
+            <button onClick={() => scrollToSection('projects')} className="btn-primary group">
               View My Work
               <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/contact" className="btn-outline">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="btn-outline">
               Get In Touch
-            </Link>
-            <a
-              href="/resume.pdf"
-              download
-              className="btn-ghost"
-            >
-              <FiDownload className="mr-2" />
-              Download Resume
-            </a>
+            </button>
           </motion.div>
 
           {/* Social Links */}
@@ -143,29 +150,6 @@ const Hero = () => {
                 <social.icon className="text-xl" />
               </motion.a>
             ))}
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center gap-2 text-dark-500"
-            >
-              <span className="text-sm font-mono">Scroll Down</span>
-              <div className="w-6 h-10 rounded-full border-2 border-dark-700 flex items-start justify-center p-2">
-                <motion.div
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="w-1.5 h-1.5 rounded-full bg-primary-400"
-                />
-              </div>
-            </motion.div>
           </motion.div>
         </motion.div>
       </div>

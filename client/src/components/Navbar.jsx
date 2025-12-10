@@ -67,15 +67,8 @@ const Navbar = () => {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group cursor-hover">
-              <motion.div
-                whileHover={{ rotate: 180 }}
-                transition={{ duration: 0.4 }}
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center shadow-glow-sm"
-              >
-                <span className="text-white font-bold text-xl">K</span>
-              </motion.div>
-              <span className="text-xl font-bold font-display gradient-text hidden sm:inline-block">
+            <Link to="/" className="flex items-center group cursor-hover">
+              <span className="text-xl font-bold font-display gradient-text">
                 Khushi Kesarwani
               </span>
             </Link>
@@ -102,15 +95,6 @@ const Navbar = () => {
                   )}
                 </button>
               ))}
-              <motion.a
-                href="/resume.pdf"
-                download
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary text-sm cursor-hover"
-              >
-                Resume
-              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -190,18 +174,6 @@ const Navbar = () => {
                     </motion.button>
                   ))}
                 </nav>
-
-                {/* Resume Button */}
-                <motion.a
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  href="/resume.pdf"
-                  download
-                  className="btn-primary w-full mt-8"
-                >
-                  Download Resume
-                </motion.a>
               </div>
             </motion.div>
           </>

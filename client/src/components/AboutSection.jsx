@@ -8,26 +8,26 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: FiCode,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable code following industry best practices',
+      title: 'Full-Stack Development',
+      description: 'Building secure, scalable web applications with React, Node.js, and MongoDB',
       color: 'primary',
     },
     {
       icon: FiZap,
-      title: 'Fast Performance',
-      description: 'Building optimized applications for the best user experience',
+      title: 'DevOps & Cloud',
+      description: 'Expertise in Docker, Kubernetes, CI/CD pipelines, and Azure cloud services',
       color: 'accent',
     },
     {
       icon: FiHeart,
-      title: 'User-Focused',
-      description: 'Creating intuitive interfaces with attention to every detail',
+      title: 'UI/UX Design',
+      description: 'Designing intuitive interfaces and digital products with Figma and Tailwind',
       color: 'secondary',
     },
     {
       icon: FiTarget,
-      title: 'Problem Solver',
-      description: 'Tackling complex challenges with innovative solutions',
+      title: 'API Development',
+      description: 'Postman API Student Expert with strong REST API development skills',
       color: 'primary',
     },
   ];
@@ -48,15 +48,24 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <ScrollReveal>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              I'm a <span className="gradient-text font-semibold">passionate student developer</span> currently 
-              exploring the exciting world of web development and cloud technologies. With a strong foundation 
-              in the <span className="text-primary-400">MERN stack</span>, I love building full-stack applications 
-              that solve real-world problems.
+              Hi, I'm <span className="gradient-text font-semibold">Khushi Kesarwani</span> — a Computer Science & Engineering student specializing in 
+              DevOps at <span className="text-primary-400">Chandigarh University</span>. I'm passionate about building reliable, secure, and user-centric 
+              digital products by combining the power of full-stack development, DevOps practices, and AI-driven solutions.
+            </p>
+            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
+              I've worked on real-world projects such as <span className="text-primary-400">Vora</span>, a secure OAuth 2.0 authentication system, 
+              <span className="text-secondary-400"> Krishi Mitra</span>, an AI agricultural assistant PWA, and a <span className="text-accent-400">DSA Tracker</span> productivity 
+              tool. My experience spans front-end engineering, backend development with Node/Flask, database design, and hands-on use of tools like Docker, 
+              Kubernetes, GitHub Actions, Jenkins, and Terraform.
+            </p>
+            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
+              I also hold certifications in <span className="text-secondary-400">Microsoft Azure AI Fundamentals</span>, <span className="text-accent-400">DevOps</span>, 
+              and <span className="text-primary-400">API Development with Postman</span>, and I've served as the Design Head of the Technophiles Society and a 
+              Campus Ambassador at GirlScript Summer of Code.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed text-center">
-              Beyond coding, I'm deeply interested in <span className="text-secondary-400">Cloud Computing</span>, <span className="text-accent-400">DevOps</span>, 
-              and creating beautiful UI/UX designs. I believe great software is a combination of robust functionality 
-              and aesthetic design.
+              I love designing clean user experiences, solving meaningful problems, and building tech that actually helps people. I'm always exploring new 
+              technologies and working on projects that push my creativity and engineering skills forward.
             </p>
           </ScrollReveal>
         </div>

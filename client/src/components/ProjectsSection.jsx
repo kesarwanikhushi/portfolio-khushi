@@ -8,102 +8,17 @@ import ProjectModal from './ProjectModal';
 
 const ProjectsSection = ({ projects = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [filter, setFilter] = useState('all');
 
-  const categories = ['all', 'fullstack', 'frontend', 'backend', 'ui/ux'];
-
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
-
-  // Sample projects if none provided
-  const sampleProjects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack online shopping platform with secure payment integration',
-      longDescription: 'A comprehensive e-commerce solution built with the MERN stack, featuring user authentication, product management, shopping cart, and secure payment processing.',
-      image: '/projects/ecommerce.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      features: [
-        'User authentication & authorization',
-        'Product catalog with search & filters',
-        'Shopping cart & wishlist',
-        'Secure payment integration',
-        'Order tracking system',
-        'Admin dashboard'
-      ],
-      category: 'fullstack',
-      githubUrl: 'https://github.com/yourusername/project',
-      liveUrl: 'https://project-demo.com',
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task manager with real-time updates',
-      longDescription: 'A productivity tool for teams to organize and track tasks with real-time collaboration features.',
-      image: '/projects/taskapp.jpg',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Redux'],
-      features: [
-        'Real-time collaboration',
-        'Drag & drop interface',
-        'Task prioritization',
-        'Team workspaces',
-        'Due date reminders'
-      ],
-      category: 'frontend',
-      githubUrl: 'https://github.com/yourusername/project',
-      liveUrl: 'https://project-demo.com',
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather app with forecasts and location tracking',
-      longDescription: 'An intuitive weather application providing current conditions and forecasts with a modern UI.',
-      image: '/projects/weather.jpg',
-      technologies: ['React', 'Weather API', 'Chart.js', 'Tailwind CSS'],
-      features: [
-        '7-day forecast',
-        'Location-based weather',
-        'Interactive charts',
-        'Favorite locations',
-        'Weather alerts'
-      ],
-      category: 'frontend',
-      githubUrl: 'https://github.com/yourusername/project',
-      liveUrl: 'https://project-demo.com',
-    },
-  ];
-
-  const displayProjects = projects.length > 0 ? filteredProjects : sampleProjects;
+  const displayProjects = projects.length > 0 ? projects : [];
 
   return (
     <section className="section bg-dark-900/30 relative" id="projects">
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="// My Work"
-          title="Featured Projects"
+          title="Projects"
           centered
         />
-
-        {/* Filter buttons */}
-        <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
-                  filter === category
-                    ? 'bg-primary-500 text-white shadow-glow-sm'
-                    : 'bg-dark-800 text-dark-400 hover:text-primary-400 border border-dark-700 hover:border-primary-500/50'
-                }`}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
-            ))}
-          </div>
-        </ScrollReveal>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

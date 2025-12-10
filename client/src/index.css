@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +15,13 @@
       radial-gradient(at 0% 0%, rgba(0, 217, 255, 0.05) 0px, transparent 50%),
       radial-gradient(at 100% 0%, rgba(191, 64, 255, 0.05) 0px, transparent 50%),
       radial-gradient(at 100% 100%, rgba(0, 217, 255, 0.03) 0px, transparent 50%);
+    cursor: none;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  * {
+    cursor: none !important;
   }
 
   html {
@@ -52,8 +59,10 @@
 @layer components {
   /* Gradient text utilities */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent font-display;
     background-size: 200% auto;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 
   .gradient-text-animate {
@@ -61,10 +70,12 @@
   }
 
   .neon-text {
-    @apply text-primary-400;
+    @apply text-primary-400 font-display;
     text-shadow: 0 0 10px rgba(0, 217, 255, 0.5),
                  0 0 20px rgba(0, 217, 255, 0.3),
                  0 0 30px rgba(0, 217, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
   /* Glass morphism variants */
@@ -113,7 +124,11 @@
   }
 
   .btn-primary {
-    @apply btn bg-gradient-to-r from-primary-500 to-secondary-500 text-white hover:shadow-glow-lg hover:scale-105;
+    @apply btn bg-primary-800 text-white hover:shadow-glow-lg hover:scale-105;
+  }
+
+  .btn-resume {
+    @apply btn bg-gradient-to-r from-secondary-600 to-neon-purple text-white hover:shadow-neon-purple hover:scale-105;
   }
 
   .btn-outline {
@@ -161,15 +176,21 @@
 
   /* Heading styles */
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-display tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-display;
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   .heading-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-display tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-display;
+    letter-spacing: -0.015em;
+    font-weight: 700;
   }
 
   .heading-md {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-display tracking-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-heading;
+    letter-spacing: -0.01em;
+    font-weight: 600;
   }
 
   /* Glow effects */
@@ -263,6 +284,26 @@
 
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Enhanced text styling */
+  .text-futuristic {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .text-tech {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .text-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    letter-spacing: 0.01em;
   }
 
   /* Perspective utilities */
