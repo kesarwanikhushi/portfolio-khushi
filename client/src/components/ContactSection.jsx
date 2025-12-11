@@ -27,7 +27,7 @@ const ContactSection = () => {
 
     try {
       // Using mailto link to open email client
-      const mailtoLink = `mailto:your.email@example.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+      const mailtoLink = `mailto:kesarwani.khushi121@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
       
       window.location.href = mailtoLink;
       
@@ -44,25 +44,25 @@ const ContactSection = () => {
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/kesarwanikhushi',
       color: 'hover:text-primary-400',
     },
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername',
+      href: 'https://linkedin.com/in/khushi-kesarwani7080',
       color: 'hover:text-primary-400',
     },
     {
       icon: FiTwitter,
       label: 'Twitter',
-      href: 'https://twitter.com/yourusername',
+      href: 'https://x.com/KhushiK7080',
       color: 'hover:text-secondary-400',
     },
     {
       icon: FiMail,
       label: 'Email',
-      href: 'mailto:your.email@example.com',
+      href: 'mailto:kesarwani.khushi121@gmail.com',
       color: 'hover:text-accent-400',
     },
   ];
