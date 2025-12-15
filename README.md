@@ -1,37 +1,55 @@
-# Portfolio MERN Stack
+# Portfolio Website
 
-A full-stack portfolio website built with the MERN stack (MongoDB, Express.js, React, Node.js) and styled with Tailwind CSS.
+A modern, interactive portfolio website built with React, Vite, and Tailwind CSS. Features custom cursor effects, smooth animations, and a responsive design.
 
 ## 🚀 Features
 
 - **Modern UI**: Clean and responsive design with Tailwind CSS
+- **Custom Cursors**: Multiple interactive cursor designs with magnetic effects
+- **Smooth Animations**: Framer Motion and React Spring animations
 - **React Router**: Client-side routing for smooth navigation
-- **RESTful API**: Backend API built with Express.js and MongoDB
-- **Contact Form**: Functional contact form with backend integration
-- **Projects Showcase**: Display your projects with details and links
+- **Contact Form**: Functional contact form with toast notifications
+- **Projects Showcase**: Display your projects with details and modals
 - **Skills Display**: Organized skills section by category
-- **Reusable Components**: Modular component architecture
+- **Reusable Components**: Modular component architecture with UI library
 
 ## 📁 Project Structure
 
 ```
-portfolio-mern/
+portfolio/
 ├── client/                 # React Frontend (Vite)
 │   ├── public/
 │   ├── src/
 │   │   ├── components/    # Reusable UI components
+│   │   │   ├── ui/        # UI primitives (Button, Card, Modal, etc.)
+│   │   │   ├── AboutSection.jsx
+│   │   │   ├── ContactSection.jsx
+│   │   │   ├── CursorDesigns.jsx
+│   │   │   ├── CustomCursor.jsx
+│   │   │   ├── EducationSection.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── MagneticCursor.jsx
+│   │   │   ├── ModernCursor.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── PageLoader.jsx
+│   │   │   ├── ProjectsSection.jsx
+│   │   │   ├── SimpleCursor.jsx
+│   │   │   └── SkillsSection.jsx
 │   │   ├── pages/         # Page components
+│   │   │   ├── About.jsx
+│   │   │   └── NewHome.jsx
 │   │   ├── data/          # Static data files
+│   │   │   ├── projects.js
+│   │   │   └── skills.js
 │   │   ├── hooks/         # Custom React hooks
-│   │   └── utils/         # Utility functions
+│   │   │   └── useCursorTheme.js
+│   │   ├── context/       # React context
+│   │   ├── services/      # API services
+│   │   ├── utils/         # Utility functions
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
 │   └── package.json
-│
-├── server/                # Node + Express Backend
-│   ├── controllers/       # Route controllers
-│   ├── models/           # Mongoose models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
-│   └── server.js         # Entry point
 │
 └── README.md
 ```
@@ -41,20 +59,25 @@ portfolio-mern/
 ### Frontend
 - **React 18** - UI library
 - **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
+- **React Router DOM** - Client-side routing
 - **Tailwind CSS** - Utility-first CSS framework
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB ODM
+### Animations & Interactions
+- **Framer Motion** - Advanced animations
+- **React Spring** - Spring physics animations
+- **Locomotive Scroll** - Smooth scrolling
+- **React Intersection Observer** - Viewport detection
+
+### UI Components
+- **React Icons** - Icon library
+- **React Hot Toast** - Toast notifications
+- **React Type Animation** - Typing animations
+- **React Scroll** - Scroll utilities
 
 ## 📦 Installation
 
 ### Prerequisites
 - Node.js (v16 or higher)
-- MongoDB (local or Atlas)
 - npm or yarn
 
 ### Setup
@@ -62,53 +85,25 @@ portfolio-mern/
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd portfolio-mern
+   cd portfolio
    ```
 
-2. **Install client dependencies**
+2. **Install dependencies**
    ```bash
    cd client
    npm install
    ```
-
-3. **Install server dependencies**
-   ```bash
-   cd ../server
-   npm install
-   ```
-
-4. **Configure environment variables**
-   
-   Create a `.env` file in the `server` directory:
-   ```env
-   NODE_ENV=development
-   PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/portfolio
-   JWT_SECRET=your_jwt_secret_key
-   CLIENT_URL=http://localhost:3000
-   ```
-
-5. **Start MongoDB**
-   
-   Make sure MongoDB is running locally or use MongoDB Atlas
 
 ## 🚀 Running the Application
 
 ### Development Mode
 
-1. **Start the backend server**
-   ```bash
-   cd server
-   npm run dev
-   ```
-   Server will run on `http://localhost:5000`
-
-2. **Start the frontend** (in a new terminal)
+1. **Start the development server**
    ```bash
    cd client
    npm run dev
    ```
-   Client will run on `http://localhost:3000`
+   Client will run on `http://localhost:5173`
 
 ### Production Build
 
@@ -118,62 +113,39 @@ portfolio-mern/
    npm run build
    ```
 
-2. **Start the server**
+2. **Preview the production build**
    ```bash
-   cd server
-   npm start
+   npm run preview
    ```
-
-## 📡 API Endpoints
-
-### Projects
-- `GET /api/projects` - Get all projects
-- `GET /api/projects/featured` - Get featured projects
-- `GET /api/projects/:id` - Get single project
-- `POST /api/projects` - Create new project (admin)
-- `PUT /api/projects/:id` - Update project (admin)
-- `DELETE /api/projects/:id` - Delete project (admin)
-
-### Contact
-- `POST /api/contact` - Submit contact form
-- `GET /api/contact` - Get all messages (admin)
-- `PATCH /api/contact/:id/read` - Mark message as read (admin)
-
-### Health Check
-- `GET /api/health` - Check server status
 
 ## 🎨 Customization
 
 ### Update Personal Information
-- Edit `client/src/components/Hero.jsx` for hero section
-- Edit `client/src/pages/About.jsx` for bio
-- Edit `client/src/data/skills.js` for your skills
-- Edit `client/src/data/projects.js` for sample projects
+- Edit [Hero.jsx](client/src/components/Hero.jsx) for hero section
+- Edit [About.jsx](client/src/pages/About.jsx) for bio
+- Edit [skills.js](client/src/data/skills.js) for your skills
+- Edit [projects.js](client/src/data/projects.js) for your projects
+
+### Cursor Themes
+- Choose from multiple cursor designs in [CursorDesigns.jsx](client/src/components/CursorDesigns.jsx)
+- Available cursors: Simple, Modern, Magnetic
+- Customize cursor behavior in respective component files
 
 ### Styling
-- Modify `client/tailwind.config.js` for theme customization
+- Modify [tailwind.config.js](client/tailwind.config.js) for theme customization
 - Update colors, fonts, and spacing in Tailwind config
-- Custom styles in `client/src/index.css`
+- Custom styles in [index.css](client/src/index.css)
 
-### Add Authentication
-- Implement JWT-based authentication
-- Add protected routes for admin features
-- Create admin panel for managing projects and messages
-
-## 🔐 Security Notes
-
-- Change `JWT_SECRET` in production
-- Use environment variables for sensitive data
-- Implement rate limiting for API endpoints
-- Add input validation and sanitization
-- Use HTTPS in production
+### Components
+- Reusable UI components available in `client/src/components/ui/`
+- Includes: AnimatedText, Badge, Button, Card, Container, FloatingElement, GlowCard, GradientBorder, Input, Loading, MarqueeText, Modal, ScrollReveal, SectionHeading, Textarea
 
 ## 📝 Future Enhancements
 
-- [ ] User authentication for admin panel
-- [ ] Image upload functionality
+- [ ] Backend API integration
 - [ ] Blog section
 - [ ] Dark mode toggle
+- [ ] More cursor designs
 - [ ] Newsletter subscription
 - [ ] Analytics integration
 - [ ] SEO optimization
@@ -186,13 +158,6 @@ Contributions, issues, and feature requests are welcome!
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
 
 ## ⭐ Show your support
 
