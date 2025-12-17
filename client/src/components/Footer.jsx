@@ -113,8 +113,8 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-6 text-lg">Get In Touch</h4>
             <ul className="space-y-3 text-dark-400">
               <li>
-                <a href="mailto:your.email@example.com" className="hover:text-primary-400 transition-colors">
-                  your.email@example.com
+                <a href="mailto:kesarwani.khushi121@gmail.com" className="hover:text-primary-400 transition-colors">
+                  kesarwani.khushi121@gmail.com
                 </a>
               </li>
               <li>Open to opportunities</li>
