@@ -116,9 +116,14 @@ const Hero = () => {
               View My Work
               <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button onClick={() => scrollToSection('contact')} className="btn-outline">
-              Get In Touch
-            </button>
+            <a 
+              href="https://drive.google.com/file/d/1dxe1iGmhxzm970_mhJcHWQIsepqajKNy/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Download Resume
+            </a>
           </motion.div>
 
           {/* Social Links */}
