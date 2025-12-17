@@ -107,16 +107,6 @@ const Hero = () => {
             </h2>
           </motion.div>
 
-          {/* Description */}
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl text-dark-400 max-w-3xl mx-auto mb-12 leading-relaxed"
-          >
-            B.E. Computer Science student specializing in DevOps at Chandigarh University. 
-            Passionate about building secure, scalable applications with modern tech stacks. 
-            Design Head at Technophiles Society and Campus Ambassador at GirlScript Summer of Code.
-          </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
