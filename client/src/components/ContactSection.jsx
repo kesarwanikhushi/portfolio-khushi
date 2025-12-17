@@ -26,13 +26,22 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Using mailto link to open email client
-      const mailtoLink = `mailto:kesarwani.khushi121@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
-      
-      window.location.href = mailtoLink;
-      
-      toast.success('Opening your email client...');
-      setFormData({ name: '', email: '', message: '' });
+      const formDataToSend = new FormData(e.target);
+      formDataToSend.append("access_key", "5efbf6a0-7327-47bc-bacb-4097d12ce415");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Failed to send message. Please try again.');
+      }
     } catch (error) {
       toast.error('An error occurred. Please try again later.');
     } finally {
