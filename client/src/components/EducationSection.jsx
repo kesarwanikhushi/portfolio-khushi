@@ -58,7 +58,7 @@ const EducationSection = () => {
       name: 'Postman API Fundamentals Student Expert',
       issuer: 'Postman',
       date: '2025',
-      image: 'https://api.badgr.io/public/badges/Mzc0MTY3NjMtMzUyMy00ZWE1LWI3OWItNzRjYjM4YzI1ZDEw/image',
+      image: 'https://www.svgrepo.com/show/354202/postman-icon.svg',
       credentialUrl: '#',
     },
   ];
