@@ -80,7 +80,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-display"
           >
-            <span className="gradient-text">Khushi Kesarwani</span>
+            <span className="bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 bg-clip-text text-transparent font-display">Khushi Kesarwani</span>
           </motion.h1>
 
           {/* Animated Title */}

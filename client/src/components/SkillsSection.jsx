@@ -60,11 +60,11 @@ const SkillsSection = () => {
           {skillCategories.map((category, categoryIndex) => (
             <ScrollReveal key={categoryIndex} delay={categoryIndex * 0.1}>
               <motion.div 
-                className="relative p-6 rounded-2xl bg-dark-800/40 border border-dark-700 hover:border-primary-500/50 transition-all duration-300 overflow-hidden group backdrop-blur-sm"
-                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.1)" }}
+                className="relative p-6 rounded-2xl bg-dark-800/40 border border-dark-700 hover:border-gray-600 transition-all duration-300 overflow-hidden group backdrop-blur-sm"
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(128, 128, 128, 0.1)" }}
               >
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                {/* Grey overlay on hover */}
+                <div className="absolute inset-0 bg-gray-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                 
                 <h3 className={`text-lg font-bold mb-5 text-primary-400 relative z-10`}>
                   {category.title}
