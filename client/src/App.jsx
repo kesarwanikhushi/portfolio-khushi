@@ -33,14 +33,14 @@ function App() {
               style: {
                 background: '#1e293b',
                 color: '#f1f5f9',
-                boxShadow: '0 0 20px rgba(0, 217, 255, 0.3)',
+                boxShadow: '0 0 20px rgba(148, 163, 184, 0.3)',
                 borderRadius: '1rem',
                 border: '1px solid #334155',
                 padding: '1rem',
               },
               success: {
               iconTheme: {
-                primary: '#00d9ff',
+                primary: '#94a3b8',
                 secondary: '#f1f5f9',
               },
             },

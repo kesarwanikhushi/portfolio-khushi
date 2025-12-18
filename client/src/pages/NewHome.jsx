@@ -27,14 +27,14 @@ const Home = () => {
         <AboutSection />
       </section>
 
-      {/* Skills Section */}
-      <section id="skills">
-        <SkillsSection />
-      </section>
-
       {/* Projects Section */}
       <section id="projects">
         <ProjectsSection projects={projectsData} />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills">
+        <SkillsSection />
       </section>
 
       {/* Education Section */}

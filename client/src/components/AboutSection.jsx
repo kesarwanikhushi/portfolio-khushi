@@ -47,19 +47,13 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <ScrollReveal>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              Hi, I'm <span className="gradient-text font-semibold">Khushi Kesarwani</span> a passionate technology enthusiast, open-source learner, and someone who truly enjoys creating meaningful work through curiosity and collaboration. I love exploring new tools, experimenting with ideas, and turning concepts into practical solutions that make a difference.
+              Hi, I'm <span className="gradient-text font-semibold">Khushi Kesarwani</span> a passionate technology enthusiast and open-source learner who enjoys exploring ideas and turning them into practical, meaningful solutions. My journey in tech is driven by continuous learning, hands-on experience, and curiosity about how things work. I love experimenting with new tools, building projects from the ground up, and pushing myself to grow with every challenge.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              My journey in tech has been shaped by continuous learning, hands-on experiences, and active participation in developer communities. Whether it's contributing to open-source, organizing or co-hosting tech sessions, or working on projects with real-world impact, I enjoy being part of spaces where knowledge is shared and people grow together. I strongly believe that technology becomes meaningful when it enables collaboration, empowerment, and innovation.
-            </p>
-            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              I'm driven by the excitement of discovering new possibilities from understanding how things work to building something from the ground up. I enjoy working with people who share the same curiosity and energy, and I'm always open to opportunities that challenge me to think creatively and push my skills further.
-            </p>
-            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
-              As I continue learning and contributing, my goal is to build a career where development, innovation, and community intersect. I aspire to contribute to projects that create real value, explore the ever-changing world of tech, and become a part of communities that encourage growth, inclusivity, and lifelong learning.
+              I actively engage with developer communities through open-source contributions, tech sessions, and collaborative projects. I believe technology creates the greatest impact when it empowers people, encourages collaboration, and fosters innovation. Working with curious, driven individuals motivates me, and I enjoy being part of environments where knowledge is shared and growth is encouraged.
             </p>
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed text-center">
-              If my work or passions resonate with you, I'd love to connect and collaborate!
+              As I continue learning and contributing, I aim to build a career where development, innovation, and community intersect creating solutions that deliver real value while growing alongside inclusive, forward thinking communities.
             </p>
           </ScrollReveal>
         </div>

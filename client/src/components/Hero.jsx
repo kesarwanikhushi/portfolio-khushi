@@ -60,9 +60,6 @@ const Hero = () => {
         </FloatingElement>
       </div>
 
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <motion.div

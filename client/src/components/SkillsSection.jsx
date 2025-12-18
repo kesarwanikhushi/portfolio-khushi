@@ -66,7 +66,7 @@ const SkillsSection = () => {
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
-                <h3 className={`text-lg font-bold mb-5 bg-gradient-to-r ${category.color} bg-clip-text text-transparent relative z-10`}>
+                <h3 className={`text-lg font-bold mb-5 text-primary-400 relative z-10`}>
                   {category.title}
                 </h3>
                 
