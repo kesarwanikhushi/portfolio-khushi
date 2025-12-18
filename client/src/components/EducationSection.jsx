@@ -89,9 +89,9 @@ const EducationSection = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-xl text-dark-300 mb-2">{edu.field}</p>
-                    <p className="text-dark-400 mb-3">{edu.institution}</p>
-                    <p className="text-dark-500">{edu.description}</p>
+                    <p className="text-xl text-white mb-2">{edu.field}</p>
+                    <p className="text-white/80 mb-3">{edu.institution}</p>
+                    <p className="text-white/70">{edu.description}</p>
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-6">
                     <div className="px-4 py-2 bg-dark-800/50 rounded-lg border border-dark-700">
@@ -112,8 +112,8 @@ const EducationSection = () => {
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center">
                   <achievement.icon className="text-2xl text-primary-400" />
                 </div>
-                <h4 className="font-semibold text-dark-100 mb-2">{achievement.title}</h4>
-                <p className="text-sm text-dark-400 leading-relaxed">{achievement.description}</p>
+                <h4 className="font-semibold text-white mb-2">{achievement.title}</h4>
+                <p className="text-sm text-white/80 leading-relaxed">{achievement.description}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -149,17 +149,17 @@ const EducationSection = () => {
                   {/* Certificate Info */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-3">
-                      <h4 className="font-bold text-dark-100 leading-tight flex-1 group-hover:text-primary-400 transition-colors duration-300">
+                      <h4 className="font-bold text-white leading-tight flex-1 group-hover:text-primary-400 transition-colors duration-300">
                         {cert.name}
                       </h4>
                     </div>
                     
                     <div className="space-y-2 mb-4">
-                      <p className="text-sm text-dark-300">
-                        <span className="text-dark-500">Issued by:</span> {cert.issuer}
+                      <p className="text-sm text-white/90">
+                        <span className="text-white/70">Issued by:</span> {cert.issuer}
                       </p>
-                      <p className="text-sm text-dark-400">
-                        <span className="text-dark-500">Date:</span> {cert.date}
+                      <p className="text-sm text-white/80">
+                        <span className="text-white/70">Date:</span> {cert.date}
                       </p>
                     </div>
                     

@@ -93,8 +93,8 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <ScrollReveal>
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-dark-50 mb-4">Let's Talk!</h3>
-                <p className="text-dark-400 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-white mb-4">Let's Talk!</h3>
+                <p className="text-white/80 leading-relaxed mb-6">
                   I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
                   Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>

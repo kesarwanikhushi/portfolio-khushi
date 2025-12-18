@@ -52,7 +52,7 @@ const AboutSection = () => {
             <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
               I actively engage with developer communities through open-source contributions, tech sessions, and collaborative projects. I believe technology creates the greatest impact when it empowers people, encourages collaboration, and fosters innovation. Working with curious, driven individuals motivates me, and I enjoy being part of environments where knowledge is shared and growth is encouraged.
             </p>
-            <p className="text-lg md:text-xl text-dark-300 leading-relaxed text-center">
+            <p className="text-lg md:text-xl text-white leading-relaxed text-center">
               As I continue learning and contributing, I aim to build a career where development, innovation, and community intersect creating solutions that deliver real value while growing alongside inclusive, forward thinking communities.
             </p>
           </ScrollReveal>
@@ -67,8 +67,8 @@ const AboutSection = () => {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center mb-4">
                     <item.icon className="text-3xl text-primary-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-dark-50 mb-3">{item.title}</h3>
-                  <p className="text-dark-400 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{item.description}</p>
                 </div>
               </GlowCard>
             </ScrollReveal>
