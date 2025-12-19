@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiArrowRight } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiX, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AnimatedText from './ui/AnimatedText';
 import FloatingElement from './ui/FloatingElement';
@@ -42,7 +42,7 @@ const Hero = () => {
   const socialLinks = [
     { icon: FiGithub, href: 'https://github.com/kesarwanikhushi', label: 'GitHub' },
     { icon: FiLinkedin, href: 'https://linkedin.com/in/khushi-kesarwani7080', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:kesarwani.khushi121@gmail.com', label: 'Email' },
+    { icon: FiX, href: 'https://x.com/KhushiK7080', label: 'X' },
   ];
 
   return (
