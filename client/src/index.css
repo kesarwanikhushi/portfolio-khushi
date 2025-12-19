@@ -10,11 +10,12 @@
   }
   
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased select-none;
     color: #ffffff;
     background: #000000;
     font-weight: 400;
     letter-spacing: -0.01em;
+    cursor: default;
   }
 
   html {
