@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiHeart, FiArrowUp, FiX } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiHeart, FiArrowUp } from 'react-icons/fi';
+import { RiTwitterXLine } from 'react-icons/ri';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,7 +29,7 @@ const Footer = () => {
     social: [
       { label: 'GitHub', icon: FiGithub, url: 'https://github.com/kesarwanikhushi' },
       { label: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/kesarwani7080' },
-      { label: 'X', icon: FiX, url: 'https://x.com/KhushiK7080' },
+      { label: 'X', icon: RiTwitterXLine, url: 'https://x.com/KhushiK7080' },
       { label: 'Email', icon: FiMail, url: 'mailto:kesarwani.khushi121@gmail.com' },
     ],
   };

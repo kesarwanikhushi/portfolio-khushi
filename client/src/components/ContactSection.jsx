@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiUser, FiMessageSquare, FiSend, FiGithub, FiLinkedin, FiX } from 'react-icons/fi';
+import { FiMail, FiUser, FiMessageSquare, FiSend, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { RiTwitterXLine } from 'react-icons/ri';
 import toast from 'react-hot-toast';
 import ScrollReveal from './ui/ScrollReveal';
 import SectionHeading from './ui/SectionHeading';
@@ -63,7 +64,7 @@ const ContactSection = () => {
       color: 'hover:text-primary-400',
     },
     {
-      icon: FiX,
+      icon: RiTwitterXLine,
       label: 'X',
       href: 'https://x.com/KhushiK7080',
       color: 'hover:text-secondary-400',
