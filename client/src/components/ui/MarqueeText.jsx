@@ -13,6 +13,7 @@ const MarqueeText = ({
     <div className={`overflow-hidden py-4 ${className}`}>
       <motion.div
         className="flex gap-8 whitespace-nowrap"
+        style={{ willChange: 'transform' }}
         animate={{
           x: direction === 'left' ? ['0%', '-33.333%'] : ['-33.333%', '0%'],
         }}
@@ -21,6 +22,7 @@ const MarqueeText = ({
             duration: speed,
             repeat: Infinity,
             ease: 'linear',
+            repeatType: 'loop',
           },
         }}
         whileHover={pauseOnHover ? { animationPlayState: 'paused' } : {}}
@@ -28,7 +30,7 @@ const MarqueeText = ({
         {duplicatedText.map((item, index) => (
           <span
             key={index}
-            className="text-4xl md:text-6xl font-bold text-dark-800 select-none"
+            className="text-4xl md:text-6xl font-bold text-neutral-500 select-none"
           >
             {item}
           </span>

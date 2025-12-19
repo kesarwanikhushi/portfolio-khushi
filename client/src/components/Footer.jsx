@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiHeart, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiHeart, FiArrowUp, FiX } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,15 +26,15 @@ const Footer = () => {
       { label: 'Contact', id: 'contact' },
     ],
     social: [
-      { label: 'GitHub', icon: FiGithub, url: 'https://github.com/yourusername' },
-      { label: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/yourusername' },
-      { label: 'Twitter', icon: FiTwitter, url: 'https://twitter.com/yourusername' },
-      { label: 'Email', icon: FiMail, url: 'mailto:your.email@example.com' },
+      { label: 'GitHub', icon: FiGithub, url: 'https://github.com/kesarwanikhushi' },
+      { label: 'LinkedIn', icon: FiLinkedin, url: 'https://linkedin.com/in/kesarwani7080' },
+      { label: 'X', icon: FiX, url: 'https://x.com/KhushiK7080' },
+      { label: 'Email', icon: FiMail, url: 'mailto:kesarwani.khushi121@gmail.com' },
     ],
   };
 
   return (
-    <footer className="relative bg-dark-950 border-t border-dark-800">
+    <footer className="relative border-t border-dark-800">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500 to-transparent opacity-50" />
 

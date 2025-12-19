@@ -49,7 +49,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="section bg-dark-900/50 relative py-20" id="skills">
+    <section className="section relative py-20" id="skills">
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="My Toolkit"

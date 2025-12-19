@@ -9,7 +9,10 @@ import About from './pages/About';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-dark-950">
+      <div className="flex flex-col min-h-screen" style={{
+        background: 'radial-gradient(ellipse at center, #2d2d2d 0%, #252525 20%, #1a1a1a 40%, #121212 60%, #0a0a0a 80%, #000000 100%)',
+        backgroundAttachment: 'fixed'
+      }}>
         {/* Page Loader */}
         <PageLoader />
 

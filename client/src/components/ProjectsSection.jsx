@@ -12,7 +12,7 @@ const ProjectsSection = ({ projects = [] }) => {
   const displayProjects = projects.length > 0 ? projects : [];
 
   return (
-    <section className="section bg-dark-900/30 relative" id="projects">
+    <section className="section relative" id="projects">
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="My Work"

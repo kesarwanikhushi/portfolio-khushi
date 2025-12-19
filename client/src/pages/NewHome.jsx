@@ -18,7 +18,7 @@ const Home = () => {
       {/* Marquee */}
       <MarqueeText 
         text={['MERN Stack', 'Cloud Computing', 'DevOps', 'UI/UX Design', 'Full-Stack Development']}
-        speed={30}
+        speed={10}
         className="bg-dark-900/30 border-y border-dark-800"
       />
 

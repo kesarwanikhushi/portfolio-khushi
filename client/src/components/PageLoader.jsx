@@ -16,7 +16,7 @@ const PageLoader = () => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[10000] flex items-center justify-center bg-dark-950"
+      className="fixed inset-0 z-[10000] flex items-center justify-center bg-black"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}

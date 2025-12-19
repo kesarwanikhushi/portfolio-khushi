@@ -46,7 +46,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <FloatingElement delay={0} duration={5} className="absolute top-20 left-10">
@@ -80,7 +80,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-display"
           >
-            <span className="bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 bg-clip-text text-transparent font-display">Khushi Kesarwani</span>
+            <span className="bg-gradient-to-r from-[#ff1493] via-[#ff69b4] to-[#ff1493] bg-clip-text text-transparent font-display" style={{ fontWeight: 700, letterSpacing: '-0.02em' }}>Khushi Kesarwani</span>
           </motion.h1>
 
           {/* Animated Title */}

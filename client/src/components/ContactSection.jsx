@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiUser, FiMessageSquare, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiMail, FiUser, FiMessageSquare, FiSend, FiGithub, FiLinkedin, FiX } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 import ScrollReveal from './ui/ScrollReveal';
 import SectionHeading from './ui/SectionHeading';
@@ -63,8 +63,8 @@ const ContactSection = () => {
       color: 'hover:text-primary-400',
     },
     {
-      icon: FiTwitter,
-      label: 'Twitter',
+      icon: FiX,
+      label: 'X',
       href: 'https://x.com/KhushiK7080',
       color: 'hover:text-secondary-400',
     },
@@ -77,7 +77,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section className="section bg-dark-950 relative overflow-hidden" id="contact">
+    <section className="section relative overflow-hidden" id="contact">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500/5 rounded-full blur-3xl" />
