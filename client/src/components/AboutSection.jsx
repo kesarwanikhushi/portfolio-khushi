@@ -46,13 +46,13 @@ const AboutSection = () => {
 
         <div className="max-w-4xl mx-auto mb-20">
           <ScrollReveal>
-            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
+            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-justify">
               Hi, I'm <span className="bg-gradient-to-r from-[#ff1493] via-[#ff69b4] to-[#ff1493] bg-clip-text text-transparent font-semibold">Khushi Kesarwani</span> a passionate technology enthusiast and open-source learner who enjoys exploring ideas and turning them into practical, meaningful solutions. My journey in tech is driven by continuous learning, hands-on experience, and curiosity about how things work. I love experimenting with new tools, building projects from the ground up, and pushing myself to grow with every challenge.
             </p>
-            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-center">
+            <p className="text-lg md:text-xl text-dark-300 leading-relaxed mb-6 text-justify">
               I actively engage with developer communities through open-source contributions, tech sessions, and collaborative projects. I believe technology creates the greatest impact when it empowers people, encourages collaboration, and fosters innovation. Working with curious, driven individuals motivates me, and I enjoy being part of environments where knowledge is shared and growth is encouraged.
             </p>
-            <p className="text-lg md:text-xl text-white leading-relaxed text-center">
+            <p className="text-lg md:text-xl text-white leading-relaxed text-justify">
               As I continue learning and contributing, I aim to build a career where development, innovation, and community intersect creating solutions that deliver real value while growing alongside inclusive, forward thinking communities.
             </p>
           </ScrollReveal>
