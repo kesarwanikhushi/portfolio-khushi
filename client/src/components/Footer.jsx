@@ -53,7 +53,7 @@ const Footer = () => {
                 Khushi Kesarwani
               </h3>
               <p className="text-dark-400 max-w-md leading-relaxed">
-                Student Developer passionate about creating beautiful, functional web experiences 
+                A Developer passionate about creating beautiful, functional web experiences 
                 with modern technologies. Always learning, always building.
               </p>
             </motion.div>
