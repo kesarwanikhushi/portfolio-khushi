@@ -9,11 +9,21 @@ export const projectsData = [
     category: 'Full-Stack',
     date: 'November 2025',
     liveUrl: 'https://vora-auth.vercel.app/',
-    githubUrl: 'https://github.com/kesarwanikhushi/Vora',
     featured: true,
   },
   {
     id: 2,
+    title: 'EnvDrop - Secure Env Sharing',
+    description: 'Built a secure .env file sharing web app that generates shareable links which auto-expire after viewing or after a configurable time. Designed for developer teams to safely share environment variables without exposing sensitive credentials in chat or email. Features include time-based link expiration, encrypted storage, and a clean, intuitive interface.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&q=80',
+    technologies: ['React', 'Node.js', 'Express.js', 'Encryption', 'Vercel'],
+    category: 'Full-Stack',
+    date: '2025',
+    liveUrl: 'https://envdrop.vercel.app/',
+    featured: true,
+  },
+  {
+    id: 3,
     title: 'DSA Tracker - Self Project',
     description: 'Built a clean and interactive web tool to help users systematically track Data Structures & Algorithms progress. Developed responsive layouts to ensure accessibility across devices. Enabled persistent progress saving using localStorage, allowing users to return and resume seamlessly.',
     image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=400&fit=crop&q=80',
@@ -21,7 +31,6 @@ export const projectsData = [
     category: 'Frontend',
     date: 'June 2025',
     liveUrl: 'https://kesarwanikhushi.github.io/Dsa-Tracker/',
-    githubUrl: 'https://github.com/kesarwanikhushi/DSA-tracker',
     featured: true,
   },
   {
@@ -33,7 +42,6 @@ export const projectsData = [
     category: 'Full-Stack',
     date: 'Aug 2025 - Sep 2025',
     liveUrl: 'https://krishi-mitra-eight-delta.vercel.app/',
-    githubUrl: 'https://github.com/kesarwanikhushi/krishi-Mitra',
     featured: true,
   },
 ];
