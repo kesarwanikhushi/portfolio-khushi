@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import PageLoader from './components/PageLoader';
 import NewHome from './pages/NewHome';
 import About from './pages/About';
+import AllProjects from './pages/AllProjects';
 
 function App() {
   return (
@@ -24,24 +25,25 @@ function App() {
           <Routes>
             <Route path="/" element={<NewHome />} />
             <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<AllProjects />} />
           </Routes>
         </main>          {/* Footer */}
-          <Footer />
-          
-          {/* Toast Notifications */}
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 3000,
-              style: {
-                background: '#1e293b',
-                color: '#f1f5f9',
-                boxShadow: '0 0 20px rgba(148, 163, 184, 0.3)',
-                borderRadius: '1rem',
-                border: '1px solid #334155',
-                padding: '1rem',
-              },
-              success: {
+        <Footer />
+
+        {/* Toast Notifications */}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#1e293b',
+              color: '#f1f5f9',
+              boxShadow: '0 0 20px rgba(148, 163, 184, 0.3)',
+              borderRadius: '1rem',
+              border: '1px solid #334155',
+              padding: '1rem',
+            },
+            success: {
               iconTheme: {
                 primary: '#94a3b8',
                 secondary: '#f1f5f9',

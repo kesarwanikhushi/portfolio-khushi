@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiGithub, FiExternalLink, FiEye, FiCode, FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import ScrollReveal from './ui/ScrollReveal';
@@ -8,15 +9,12 @@ import ProjectModal from './ProjectModal';
 
 const ProjectsSection = ({ projects = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const navigate = useNavigate();
 
   const displayProjects = projects.length > 0 ? projects.slice(0, 3) : [];
 
   const handleViewAllProjects = () => {
-    displayProjects.forEach((project) => {
-      if (project.liveUrl) {
-        window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
-      }
-    });
+    navigate('/projects');
   };
 
   return (
