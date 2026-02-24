@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiGithub, FiExternalLink, FiEye, FiCode } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiEye, FiCode, FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import ScrollReveal from './ui/ScrollReveal';
 import SectionHeading from './ui/SectionHeading';
@@ -10,6 +10,14 @@ const ProjectsSection = ({ projects = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const displayProjects = projects.length > 0 ? projects : [];
+
+  const handleViewAllProjects = () => {
+    displayProjects.forEach((project) => {
+      if (project.liveUrl) {
+        window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+      }
+    });
+  };
 
   return (
     <section className="section relative" id="projects">
@@ -38,7 +46,7 @@ const ProjectsSection = ({ projects = [] }) => {
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent opacity-60" />
-                  
+
                   {/* View Details overlay */}
                   <div className="absolute inset-0 bg-dark-950/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <button
@@ -104,6 +112,21 @@ const ProjectsSection = ({ projects = [] }) => {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* View All Projects Button */}
+        {displayProjects.length > 0 && (
+          <div className="flex justify-center mt-12">
+            <motion.button
+              onClick={handleViewAllProjects}
+              className="btn-primary group flex items-center gap-2 px-8 py-3 text-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View All Projects
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </div>
+        )}
       </div>
 
       {/* Project Modal */}
