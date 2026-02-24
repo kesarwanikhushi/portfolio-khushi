@@ -9,7 +9,7 @@ import ProjectModal from './ProjectModal';
 const ProjectsSection = ({ projects = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const displayProjects = projects.length > 0 ? projects : [];
+  const displayProjects = projects.length > 0 ? projects.slice(0, 3) : [];
 
   const handleViewAllProjects = () => {
     displayProjects.forEach((project) => {
